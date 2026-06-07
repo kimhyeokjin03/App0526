@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadFragment">
+
+    <fragment
+        android:id="@+id/loadFragment"
+        android:name="com.example.app0526.RestaurantLoadFragment"
+        android:label="Load">
+
+        <action
+            android:id="@+id/action_loadFragment_to_mapFragment"
+            app:destination="@id/mapFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.app0526.RestaurantMapFragment"
+        android:label="Map">
+
+        <action
+            android:id="@+id/action_mapFragment_to_detailFragment"
+            app:destination="@id/detailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.app0526.RestaurantDetailFragment"
+        android:label="Detail"/>
+</navigation>
